@@ -1,10 +1,12 @@
 import React from 'react'
 import { PRODUCTS } from '../db/Products'
 import { useCart } from '../context/cart-context'
+import { useNavigate } from 'react-router-dom'
 
-const Products = ({product}) => {
+const ProductCard = ({product}) => {
 
      const {cartDispatch}=useCart();
+     const navigate=useNavigate();
     const onAddToCartClick=()=>{
         cartDispatch(
             {type:'ADD_TO_CART',
@@ -22,9 +24,14 @@ const Products = ({product}) => {
             }
         )
     }
+
+    const onTitleClick=()=>{
+        navigate(`/productDetails/${product.id}`)
+        
+    }
   return (
    <div className='flex flex-col text-center items-center border px-7 py-10 m-5 rounded'>
-    <div>
+    <div onClick={onTitleClick} >
          <p className='font-bold'>{product.title}</p>
     </div>
 
@@ -44,4 +51,4 @@ const Products = ({product}) => {
   )
 }
 
-export default Products
+export default ProductCard

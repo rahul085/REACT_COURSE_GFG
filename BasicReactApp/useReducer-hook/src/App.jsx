@@ -17,7 +17,7 @@ const initialState={
 
   const handlePriceFilter=(e)=>{
 
-*/41    filterDispatch({type:"PRICE",payload:e.target.value})
+  filterDispatch({type:"PRICE",payload:e.target.value})
   }
 
   const handleDiscountFilter=(e)=>{

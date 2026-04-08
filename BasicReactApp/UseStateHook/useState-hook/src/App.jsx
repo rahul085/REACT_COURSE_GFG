@@ -188,7 +188,7 @@ export default App;
 //----------------------------------------Filtering based on the Search--------------------------------------------
 
 // const allBrands=[
-//   {id:"1",brandName:"puma"},
+//   {id:"1",brandName:"puma"}, 
 //   {id:"2",brandName:"adidas"},
 //   {id:"3",brandName:"nike"},
 //   {id:"4",brandName:"fila",},
